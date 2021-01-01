@@ -20,10 +20,6 @@ export const actions = {
   fetchBooks({ commit }) {
     fetchData(process.env.bibliopopExcel, { commit })
   },
-
-  filterBooks({ commit }, payload) {
-    commit('FILTER_BOOKS', payload)
-  },
 }
 
 /**
