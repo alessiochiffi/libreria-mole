@@ -18,7 +18,10 @@ export const actions = {
    * Fetch current week tab from Google Sheet url
    */
   fetchBooks({ commit }) {
-    fetchData(process.env.bibliopopExcel, { commit })
+    fetchData(
+      'https://docs.google.com/spreadsheets/d/1XnlV69dZxqPC9VedJZcUSkz451fFSE4DNOC4d8yc3bo/edit#gid=0',
+      { commit }
+    )
   },
 }
 
