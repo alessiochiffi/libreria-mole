@@ -70,11 +70,19 @@
                 <v-list-item-title class="headline">
                   {{ book.book_name }}
                 </v-list-item-title>
+                <v-list-item-subtitle
+                  >di {{ book.book_author }}</v-list-item-subtitle
+                >
+                <br />
+                <v-list-item-subtitle
+                  >Edizione: {{ book.book_edition }}</v-list-item-subtitle
+                >
+                <br />
                 <v-list-item-subtitle>{{
-                  book.book_author
+                  book.book_publication
                 }}</v-list-item-subtitle>
                 <br />
-                {{ book.bookLocation }}
+                {{ book.book_location }}
               </v-list-item-content>
             </v-list-item>
           </v-card>

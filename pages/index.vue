@@ -1,8 +1,11 @@
 <template>
   <div v-if="loaded">
+    <Hero></Hero>
     <Books></Books>
   </div>
   <div v-else>
+    <Hero></Hero>
+    <br />
     <v-container>
       <v-row>
         <v-col cols="12" md="4">

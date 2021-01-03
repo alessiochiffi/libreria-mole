@@ -32,17 +32,18 @@ export const actions = {
  * @param {Object} commit Vuex commit to state function
  */
 function fetchData(sheetUrl, { commit }) {
-  const appData = []
+  let appData = []
 
   const sheetrockCallback = (error, options, response) => {
     if (!error) {
       response.rows.forEach((row) => {
+        const author = row.cellsArray[0].replace(';', '').replace(',', '')
         const obj = {
-          book_author: row.cellsArray[0],
+          book_author: author,
           book_name: row.cellsArray[1],
-          bookLocation: row.cellsArray[2],
-          bookEdition: row.cellsArray[3],
-          bookPublication: row.cellsArray[4],
+          book_location: row.cellsArray[2],
+          book_edition: row.cellsArray[3],
+          book_publication: row.cellsArray[4],
         }
         if (!row.cellsArray[0].includes('AUTORE')) {
           appData.push(obj)
