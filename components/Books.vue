@@ -173,10 +173,10 @@ export default {
   margin-bottom: 10px;
 }
 
-.headline {
+/* .headline {
   padding-left: 0;
   min-height: 70px;
   display: flex;
   align-items: flex-start;
-}
+} */
 </style>
