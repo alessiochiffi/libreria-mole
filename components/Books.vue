@@ -67,7 +67,7 @@
           <v-card>
             <v-list-item>
               <v-list-item-content>
-                <v-list-item class="headline">
+                <v-list-item class="headline book__headline">
                   {{ book.book_name }}
                 </v-list-item>
                 <v-list-item-subtitle
@@ -173,10 +173,10 @@ export default {
   margin-bottom: 10px;
 }
 
-/* .headline {
+.book__headline.headline {
   padding-left: 0;
   min-height: 70px;
   display: flex;
   align-items: flex-start;
-} */
+}
 </style>
