@@ -19,7 +19,7 @@
       </v-col>
       <br />
 
-      <div>Filtra autori</div>
+      <div class="filter__author">Filtra autori</div>
       <div class="alphabet">
         <div v-for="(letter, index) in alphabet" :key="index" class="letter">
           <v-avatar
@@ -167,5 +167,9 @@ export default {
 
 .v-avatar {
   cursor: pointer;
+}
+
+.filter__author {
+  margin-bottom: 10px;
 }
 </style>
