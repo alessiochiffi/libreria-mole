@@ -67,9 +67,9 @@
           <v-card>
             <v-list-item>
               <v-list-item-content>
-                <v-list-item-title class="headline">
+                <v-list-item class="headline">
                   {{ book.book_name }}
-                </v-list-item-title>
+                </v-list-item>
                 <v-list-item-subtitle
                   >di {{ book.book_author }}</v-list-item-subtitle
                 >
@@ -171,5 +171,12 @@ export default {
 
 .filter__author {
   margin-bottom: 10px;
+}
+
+.headline {
+  padding-left: 0;
+  min-height: 70px;
+  display: flex;
+  align-items: flex-start;
 }
 </style>
