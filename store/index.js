@@ -37,7 +37,10 @@ function fetchData(sheetUrl, { commit }) {
   const sheetrockCallback = (error, options, response) => {
     if (!error) {
       response.rows.forEach((row) => {
-        const author = row.cellsArray[0].replace(';', '').replace(',', '')
+        const author = row.cellsArray[0]
+          .replace(';', '')
+          .replace(',', ' ')
+          .replace('  ', ' ')
         const obj = {
           book_author: author,
           book_name: row.cellsArray[1],
