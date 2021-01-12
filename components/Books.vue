@@ -38,16 +38,16 @@
     <v-container v-if="filteredAuthors.length > 0">
       <v-row class="mb-6">
         <v-col
-          v-for="(book, index) in filteredAuthors"
+          v-for="(author, index) in filteredAuthors"
           :key="index"
           cols="12"
           md="4"
         >
-          <v-card @click="searchAuthor(book.book_author)">
+          <v-card @click="searchAuthor(author)">
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title class="headline">{{
-                  book.book_author
+                  author
                 }}</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
@@ -136,12 +136,14 @@ export default {
     filterAuthorsByLetter(e) {
       this.filteredAuthors = []
       this.filteredBooks = []
-
-      this.$data.filteredAuthors = this.books.filter((book) => {
-        const author = book.book_author.charAt(0)
-        const authorInitial = author.toLowerCase()
+      const authorsList = this.$store.state.singleAuthors
+      this.$data.filteredAuthors = authorsList.filter((author) => {
+        const authorFL = author.charAt(0)
+        const authorInitial = authorFL.toLowerCase()
         const search = e.toLowerCase()
-        return authorInitial === search
+        if (authorInitial === search) {
+          return author
+        }
       })
     },
 

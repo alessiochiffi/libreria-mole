@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loaded">
+  <div v-if="loaded" class="app-loaded">
     <Hero></Hero>
     <div class="container">
       <div class="logo"><img src="/logo.png" alt="" /></div>
