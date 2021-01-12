@@ -29,9 +29,9 @@
 
 <style lang="scss">
 footer {
-  padding: 40px 0;
+  padding: 70px 0;
   background: #f2f2f2;
-  height: 100%;
+  height: auto;
   margin-top: 100px;
 
   .logo img {
