@@ -5,6 +5,7 @@
       <div class="logo"><img src="/logo.png" alt="" /></div>
     </div>
     <Books></Books>
+    <Footer />
   </div>
   <div v-else>
     <Hero></Hero>
@@ -33,6 +34,7 @@
         </v-col>
       </v-row>
     </v-container>
+    <Footer />
   </div>
 </template>
 
