@@ -17,7 +17,7 @@
               <a
                 target="_blank"
                 href="https://it-it.facebook.com/Associazioneacabmarino/"
-                >Associazione ACAB Marino</a
+                >ACAB/BiblioPop APS Marino</a
               >
             </li>
           </ul>
