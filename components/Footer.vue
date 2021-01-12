@@ -8,7 +8,7 @@
           <h5>Via Ugo Bassi - Marino (RM)</h5>
         </div>
 
-        <div class="col-md-8">
+        <div class="col-md-8 col-informazioni">
           <h3 class="informazioni">Per info e per prenotare il tuo libro</h3>
           <ul>
             <li>Chiamaci al numero 340 9562661</li>
@@ -47,6 +47,14 @@ footer {
 @media (max-width: 900px) {
   .address {
     text-align: center;
+  }
+
+  .col-informazioni {
+    text-align: center;
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
   }
 }
 </style>
