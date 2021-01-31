@@ -8,11 +8,15 @@ export const state = {
 
 export const mutations = {
   SET_GENERAL(state, payload) {
-    state.data = payload
+    const books = payload
+    Object.freeze(books)
+    state.data = books
     state.isLoaded = true
   },
   SET_SINGLE_AUTHORS(state, payload) {
-    state.singleAuthors = payload
+    const singleAuthors = payload
+    Object.freeze(singleAuthors)
+    state.singleAuthors = singleAuthors
   },
 }
 

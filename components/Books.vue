@@ -64,28 +64,18 @@
           cols="12"
           md="4"
         >
-          <v-card>
-            <v-list-item>
-              <v-list-item-content>
-                <v-list-item class="headline book__headline">
-                  {{ book.book_name }}
-                </v-list-item>
-                <v-list-item-subtitle
-                  >di {{ book.book_author }}</v-list-item-subtitle
-                >
-                <br />
-                <v-list-item-subtitle
-                  >Edizione: {{ book.book_edition }}</v-list-item-subtitle
-                >
-                <br />
-                <v-list-item-subtitle>{{
-                  book.book_publication
-                }}</v-list-item-subtitle>
-                <br />
-                {{ book.book_location }}
-              </v-list-item-content>
-            </v-list-item>
-          </v-card>
+          <div class="card">
+            <div class="card__content">
+              <div class="headline book__headline">
+                {{ book.book_name }}
+              </div>
+              <div class="subtitle">di {{ book.book_author }}</div>
+              <br />
+              <div class="edition">Edizione: {{ book.book_edition }}</div>
+              <div class="edition">{{ book.book_publication }}</div>
+              <div class="edition">{{ book.book_location }}</div>
+            </div>
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -103,14 +93,14 @@ export default {
   },
   computed: {
     books() {
-      return this.$store.state.data
+      return Object.freeze(this.$store.state.data)
     },
   },
   methods: {
     filterBooks(e) {
       this.filteredAuthors = []
       if (e !== '' && e.length > 2) {
-        this.$data.filteredBooks = this.books.filter((book) => {
+        this.filteredBooks = this.books.filter((book) => {
           const name = book.book_name.toLowerCase()
           const search = e.toLowerCase()
           return name.includes(search)
@@ -180,5 +170,14 @@ export default {
   min-height: 70px;
   display: flex;
   align-items: flex-start;
+  font-weight: 500;
+  color: #333;
+}
+
+.card {
+  border: 1px solid #f3f3f3;
+  box-shadow: 0 10px 20px rgb(199 199 199 / 19%),
+    0 6px 6px rgb(211 211 211 / 23%);
+  padding: 20px;
 }
 </style>
