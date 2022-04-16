@@ -22,7 +22,7 @@ export const mutations = {
 
 export const actions = {
   /**
-   * Fetch current week tab from Google Sheet url
+   * Fetch data from Google Sheet url
    */
   fetchBooks({ commit }) {
     fetchData(
@@ -34,7 +34,6 @@ export const actions = {
 
 /**
  * Fetch data function - using sheetrock to clean up Google Sheet API response
- * Creating the object for each day and registaring it the vuex state
  * @param {String} sheetUrl Google sheet url with specific ID value for tab
  * @param {Object} commit Vuex commit to state function
  */
